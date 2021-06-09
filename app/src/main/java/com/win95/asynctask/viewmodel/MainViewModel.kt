@@ -15,16 +15,13 @@ class MainViewModel : ViewModel() {
             asyncStart.execute()
         }
     }
-
-    fun changetime( ){
+    fun toggleThread(){
+        asyncStart.toggle()
+    }
+    var cnt = 0
+    fun change( ){
         tm = (tm%3+1)
-        this.time.value = tm
+        cnt = cnt+1
+        this.time.postValue(tm)
     }
-    var imageCount = 1
-
-    fun change(){
-        imageCount = ((imageCount+1)%3+1)
-        this.image.value = "img"+imageCount.toString()
-    }
-
 }

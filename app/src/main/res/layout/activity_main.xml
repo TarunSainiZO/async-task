@@ -7,24 +7,23 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/timeTag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/timeTag"
         android:text="Time left"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toLeftOf="@id/change"
-        app:layout_constraintTop_toTopOf="parent"
-        android:textStyle="bold"
         android:textColor="#1E7169"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        />
+        app:layout_constraintRight_toLeftOf="@id/change"
+        app:layout_constraintTop_toTopOf="parent" />
     <TextView
         android:id="@+id/change"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="24sp"
-        android:text="Hello World!"
+        android:text="1"
         app:layout_constraintLeft_toRightOf="@id/timeTag"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -32,12 +31,22 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         app:layout_constraintBottom_toTopOf="@+id/change"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="119dp"
+        android:text="Stop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timeTag" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
